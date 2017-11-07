@@ -1,0 +1,173 @@
+.mmb_container {
+  margin-bottom: 92px;
+}
+
+.good_lists {
+  position: relative;
+}
+
+.product_subnav {
+  line-height: 49px;
+  height: 50px;
+  background: linear-gradient(#fff, #eee);
+  position: relative;
+  padding-left: 15px;
+}
+
+.product_subnav button {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  width: 50px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.pro_title {
+  padding: 20px 20px 5px;
+  height: 70px;
+  line-height: 25px;
+}
+
+.pro_title h5 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.pro_pic {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pro_pic img {
+  width: 160px;
+  height: 160px;
+}
+
+.product_bar {
+  height: 40px;
+  border-top: 1px solid #ff6c00;
+  border-bottom: 1px solid #ff6c00;
+}
+
+.product_bar a {
+  text-align: center;
+  line-height: 38px;
+  height: 40px;
+  float: left;
+  width: 33.33%;
+  display: block;
+  border-right: 1px solid #ff6c00;
+  background-color: #FFC936;
+}
+
+.product_bar a:nth-child(1) {
+  background-color: #FF9C1C;
+}
+
+.product_bar a:last-child {
+  border-right: none;
+}
+
+.product_tips {
+  display: block;
+  top: 150px;
+  right: 70px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  background-color: #95D700;
+  color: #fff;
+}
+
+.product_title {
+  height: 50px;
+  padding: 0 15px;
+  line-height: 49px;
+  border-bottom: 1px solid #ccc;
+}
+
+.product_ti_left {
+  padding-left: 40px;
+  font-weight: 700;
+  width: 100px;
+  height: 100%;
+  line-height: 49px;
+  background: url("../images/jd.png") no-repeat 0 15px/20px 20px;
+}
+
+.product_ti_right span {
+  color: red;
+  font-size: 18px;
+}
+
+.product_ti_right button {
+  color: #fff;
+  width: 60px;
+  height: 25px;
+  background-color: #FF5500;
+  border-radius: 5px;
+}
+
+.product_pro {
+  padding: 5px 10px 0;
+  height: 50px;
+  width: 100%;
+  color: #aaa;
+  font-size: 14px;
+  border-bottom: 2px solid #7A7A7A;
+}
+
+.pro_content .black_bar {
+  height: 35px;
+  background-color: #DBDBDB;
+  text-align: center;
+  line-height: 35px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.pro_content_list {
+  padding: 5px 10px 0;
+}
+
+.con_header {
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+  color: #67BBC4;
+}
+
+.con_from {
+  height: 30px;
+  line-height: 30px;
+}
+
+.con_from p {
+  float: right;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.con_focus {
+  font-size: 14px;
+  color: #000;
+}
+
+.pro_more {
+  height: 60px;
+  width: 100%;
+  padding: 10px 5px;
+}
+
+.pro_more button {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+}

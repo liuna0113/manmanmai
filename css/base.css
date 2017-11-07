@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+input, button {
+  border: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+
+.clearfix:after,
+.clearfix:before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.txt-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.txt-ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.sprite {
+  background: url(../images/sprite_index.png) no-repeat;
+}
+
+textarea {
+  border: none;
+}

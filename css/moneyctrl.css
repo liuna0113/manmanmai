@@ -1,0 +1,91 @@
+.first_header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.first_header span {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.mmb_container {
+  margin-top: 50px;
+  margin-bottom: 92px;
+}
+
+.good_list {
+  padding: 15px;
+  height: 130px;
+}
+
+.good_list .left_pic {
+  /*padding: 10px;*/
+  
+}
+
+.good_list .left_pic img {
+  width: 100px;
+  height: 100px;
+}
+
+.good_list .right_content {
+  display: block;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.content_title {
+  height: 70px;
+  color: #333;
+}
+
+.content_title span {
+  color: #ff6c00;
+}
+
+.content_num,
+.content_time {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+
+.bottom_btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 40px;
+  width: 100%;
+  max-width: 750px;
+  background-color: #eee;
+}
+
+.bottom_btn > div {
+  float: left;
+  height: 100%;
+  width: 33.33%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.left_btn a,
+.middle_btn select,
+.right_btn a {
+  height: 40px;
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+.left_btn a,
+.right_btn a {
+  display: inline-block;
+}
+
+.middle_btn select {
+  padding-left: 15px;
+}
+

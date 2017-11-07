@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/productInfo.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="first_header">
+  <a class="title"></a>
+  <a class="download"></a>
+</div>
+<div class="first_search">
+  <input type="text" placeholder="请输入你想比价的商品">
+  <button>搜索</button>
+</div>
+<div class="mmb_container">
+  <div class="mmb_subcontainer">
+    <div class="product_subnav">
+      <div class="product_nav_main">
+        <a href="index.html">首页</a>
+        &gt;
+        <a href="category.html">全部分类</a>
+        &gt;
+        <a href="#">电视</a>
+        &gt;
+      </div>
+      <button class="select">筛选</button>
+    </div>
+    <div class="good_lists">
+      <!--挖个内容坑-->
+    </div>
+    <div class="pro_content">
+      <!--挖个评论坑-->
+    </div>
+  </div>
+  <div class="pro_more">
+    <button>查看更多评价</button>
+  </div>
+</div>
+
+<div class="first_root">
+  <div class="first_info">
+    <div class="top_info">
+      <span>登录</span>
+      <span>注册</span>
+      <a href="#" class="iconfont icon-huidingbu">返回顶部</a>
+    </div>
+    <div class="bottom_info">
+      <p>
+        <a class="download" href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<script type="text/html" id="tpl">
+  {{each result v i}}
+  <a href="index.html">首页</a>
+  &gt;
+  <a href="category.html">全部分类</a>
+  &gt;
+  {{each result v i}}
+  <a href="#">{{v.category}}</a>
+  &gt;
+  {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+  {{each result v i}}
+  <div class="pro_title">
+    <h5>{{v.productName}}</h5>
+  </div>
+  <div class="pro_pic">
+    {{@result[i].productImg}}
+  </div>
+  <div class="product_bar clearfix">
+    <a href="javascript:;">
+      <span class="">比价购买</span>
+    </a>
+    <a href="javascript:;">
+      <span class="">产品参数</span>
+    </a>
+    <a href="javascript:;">
+      <span class="">评价(2322)</span>
+    </a>
+  </div>
+  <a href="javascript:;" class="product_tips">收藏</a>
+  <div class="product_title clearfix">
+    <div class="product_ti_left fl">京 东</div>
+    <div class="product_ti_right fr">
+      <span>&yen;1999.00</span>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button>去购买</button>
+    </div>
+  </div>
+  <div class="product_pro">
+    <span class="txt-ellipsis-2">*实际价格以各网站列出的实时售价为准,我们提供的价格可能有数小时至数日的延迟</span>
+  </div>
+  {{/each}}
+</script>
+<script type="text/html" id="tpl3">
+  <div class="black_bar">网友评价</div>
+  {{each result v i}}
+  <div class="pro_content_list">
+    <div class="con_header clearfix">
+      <div class="con_name fl">{{v.comName}}</div>
+      <div class="con_time fr">{{v.comTime}}</div>
+    </div>
+    <div class="con_from"><p>{{v.comFrom}}</p></div>
+    <div class="con_focus">
+      {{v.comContent}}
+    </div>
+  </div>
+  {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productInfo.js"></script>
+</body>
+</html>

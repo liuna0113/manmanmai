@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="first_header">
+  <a class="title"></a>
+  <a class="download"></a>
+</div>
+<div class="first_search">
+  <input type="text" placeholder="请输入你想比价的商品">
+  <button>搜索</button>
+</div>
+<div class="mmb_container">
+  <div class="first_nav">
+    <ul class="one_nav clearfix">
+      <!--挖个坑-->
+    </ul>
+  </div>
+  <div class="first_product">
+    <div class="bar">
+      <span class="text">超值折扣推荐</span>
+      <span class="sprite"></span>
+    </div>
+    <div class="good_box">
+      <!--挖个大坑-->
+    </div>
+    <div class="more">
+      <a href="javascript:;">
+        更多优惠信息&gt;&gt;
+      </a>
+    </div>
+  </div>
+</div>
+<div class="first_root">
+
+  <div class="bar">
+    <span class="text">品牌排行</span>
+    <span class="sprite"></span>
+  </div>
+  <div class="first_info">
+    <div class="top_info">
+      <span>登录</span>
+      <span>注册</span>
+      <span class="iconfont icon-huidingbu">返回顶部</span>
+    </div>
+    <div class="bottom_info">
+      <p>
+        <a class="download" href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<div class="pic_brand">
+  <img src="./images/appback.png" alt="">
+</div>
+<script type="text/html" id="tpl">
+  {{each result v i}}
+  <li class="fl <%=(i>=8)?'two_nav':'' %>">
+    <a href="{{v.titlehref}}" class="{{(v.titlehref=='#')?'nav_now':''}}">
+      {{@result[i].img}}
+      <p>{{v.name}}</p>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+  {{each result v i}}
+  <div class="good_list">
+    <div class="left_pic fl">
+      {{@result[i].productImgSm}}
+    </div>
+    <a href="javascript:;" class="right_content">
+      <div class="content_title txt-ellipsis-2">{{v.productName}}<span>{{v.productPinkage}}</span></div>
+      <div class="content_time fl">{{v.productFrom}} | {{v.productTime}}</div>
+      <div class="content_num iconfont icon-wodefankui fr">&nbsp;<span>{{v.productComCount}}</span></div>
+    </a>
+  </div>
+  {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>

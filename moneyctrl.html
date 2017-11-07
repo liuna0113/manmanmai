@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="first_header">
+  <span class="iconfont icon-fanhui"></span>
+  <h2>省 钱 控 , 最 新 优 惠</h2>
+  <a class="download"></a>
+</div>
+<div class="mmb_container">
+  <div class="first_product">
+    <div class="good_box">
+      <!--挖个大坑-->
+    </div>
+  </div>
+  <div class="bottom_btn clearfix">
+    <div class="left_btn">
+      <a href="javascript:;">上一页</a>
+    </div>
+    <div class="middle_btn">
+      <select name="page" id="page">
+        <!--挖个坑-->
+      </select>
+    </div>
+    <div class="right_btn">
+      <a href="javascript:;">下一页</a>
+    </div>
+  </div>
+</div>
+<div class="first_root">
+  <div class="first_info">
+    <div class="top_info">
+      <span>登录</span>
+      <span>注册</span>
+      <span class="iconfont icon-huidingbu">返回顶部</span>
+    </div>
+    <div class="bottom_info">
+      <p>
+        <a class="download" href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<script type="text/html" id="tpl2">
+  {{each result v i}}
+  <div class="good_list" data-productid="{{v.productId}}">
+    <div class="left_pic fl">
+      {{@result[i].productImgSm}}
+    </div>
+    <a href="javascript:;" class="right_content">
+      <div class="content_title txt-ellipsis-2">{{v.productName}}<span>{{v.productPinkage}}</span></div>
+      <div class="content_time fl">{{v.productFrom}} | {{v.productTime}}</div>
+      <div class="content_num iconfont icon-wodefankui fr">&nbsp;<span>{{v.productComCount}}</span></div>
+    </a>
+  </div>
+  {{/each}}
+</script>
+<script type="text/html" id="tpl">
+  <%for(var i=1;i<=pageNum;i++){%>
+  <%if(i==pageid){%>
+  <option selected><%=i%></option>
+  <%}else{%>
+  <option><%=i%></option>
+  <%}%>
+  <%}%>
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/moneyctrl.js"></script>
+</body>
+</html>
+
+
+<!--<div class="cu-content-pl ui-border-t">-->
+<!--<div class="tit">发表评论</div>-->
+<!--<div class="reply">-->
+<!--<div class="form">-->
+<!--<textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>-->
+<!--<input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">-->
+<!--<input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="华美 酥性饼干 糕点小吃 粗粮饼 468g"-->
+<!--type="hidden">-->
+<!--<div class="ctrl">-->
+<!--<input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="tit" id="newcomment">最新评论</div>-->
+<!--<div class="list">-->
+<!--<ul>-->
+<!--<li class="ui-border-b">-->
+<!--<div class="userimg"><img src="http://bbs.manmanbuy.com/images/face/none.gif"></div>-->
+<!--<div class="con">-->
+<!--<div class="name clearfix">-->
+<!--<div class="username">sxy66</div>-->
+<!--<div class="time">2016/10/25 13:23:47</div>-->
+<!--</div>-->
+<!--<div class="content">好吃</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li class="ui-border-b">-->
+<!--<div class="userimg"><img src="http://home.manmanbuy.com/upface/face/1442404248_162.jpg"></div>-->
+<!--<div class="con">-->
+<!--<div class="name clearfix">-->
+<!--<div class="username">binglin</div>-->
+<!--<div class="time">2016/10/25 11:37:55</div>-->
+<!--</div>-->
+<!--<div class="content">好不好吃啊 ？</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<!--<div class="deliver_con">-->
+<!--<p class="p_content">发表评论</p>-->
+<!--<div class="con_box">-->
+<!--<div class="con_innerbox">-->
+<!--<textarea name=""></textarea>-->
+<!--<div class="deliver">-->
+<!--<button>发表评论</button>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<p class="p_content">最新评论</p>-->
+<!--<div class="outer_new_con">-->
+<!--<div class="new_con">-->
+<!--<div class="inner_content clearfix">-->
+<!--<img class="fl" src="./images/watchtv.jpg" alt="">-->
+<!--<div class="inner_right">-->
+<!--<p class="p_top_title clearfix">-->
+<!--<span class="p_title_name fl">赶鸭子上架</span>-->
+<!--<span class="p_title_time fr">2016/10/25 14:18:45</span></p>-->
+<!--<p class="p_bottom_con">比超市便宜了几块</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="new_con">-->
+<!--<div class="inner_content clearfix">-->
+<!--<img class="fl" src="./images/watchtv.jpg" alt="">-->
+<!--<div class="inner_right">-->
+<!--<p class="p_top_title clearfix">-->
+<!--<span class="p_title_name fl">赶鸭子上架</span>-->
+<!--<span class="p_title_time fr">2016/10/25 14:18:45</span></p>-->
+<!--<p class="p_bottom_con">比超市便宜了几块</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--</div>-->
