@@ -6,19 +6,31 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="css/moneyctrlList.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
   <title>Document</title>
 </head>
 <body>
 <div class="first_header">
   <span class="iconfont icon-fanhui"></span>
-  <h2>省 钱 控</h2>
+  <h2>白菜价-淘宝内部优惠券</h2>
   <a class="download"></a>
 </div>
 <div class="mmb_container">
-  <!--坑在这儿-->
+  <div class="baicai_nav">
+    <div class="mui-scroll-wrapper">
+      <ul class="mui-scroll clearfix">
+        <!--这里放置真实显示的DOM内容-->
+        <!--第一个坑-->
+      </ul>
+    </div>
+  </div>
+  <div class="baicai_item_box">
+    <!--先挖个坑-->
+  </div>
+
 </div>
 <div class="first_root">
   <div class="first_info">
@@ -36,50 +48,39 @@
       <p>m.manmanbuy.com</p>
     </div>
   </div>
+  <a href="#" class="fanhui iconfont icon-huidingbu"></a>
 </div>
 <script type="text/html" id="tpl">
-
-  <div class="top_content">
-    {{each result v i}}
-    <p>{{v.productName}} <span>{{v.productPinkage}}</span></p>
-    <div class="discount_subtitle">
-      <span>{{v.productFrom}}</span>
-      <span>{{v.productTime}}</span>
-      <span>{{v.productTips}}</span>
-    </div>
-    <div class="content_pic">
-      {{@result[i].productImgSm}}
-      <span class="discount_con">
-       {{v.productInfo2}}
-      </span>
-    </div>
-    <div class="bottom_pic">
-      {{@result[i].productImg2}}
-    </div>
-    <div class="city_list">
-      {{@result[i].productCity}}
-
-    </div>
-    {{/each}}
-
-  </div>
-  <div class="go_buy">
-    <button>前往购买</button>
-  </div>
-  <div class="code">
-    <img src="./images/mmbweixin2.png" alt="">
-  </div>
   {{each result v i}}
-  {{@result[i].productComment}}
+  <li><a data-titleid="{{v.titleId}}" class="{{i==0?'now':''}}" href="javascript:;">{{v.title}}</a></li>
   {{/each}}
-
 </script>
 <script type="text/html" id="tpl2">
-
+  {{each result v i}}
+  <div class="baicai_item" data-productid="{{v.productId}}">
+    <div class="baicai_left_pic fl">
+      {{@result[i].productImg}}
+    </div>
+    <div class="baicai_right_con">
+      <div class="baicai_ri_title">
+        {{@result[i].productName}}
+      </div>
+      <div class="baicai_ri_content">
+        {{@result[i].productPrice}}
+      </div>
+      {{@result[i].productCouponRemain}}
+      <div class="baicai_receive clearfix">
+        {{@result[i].productCoupon}}
+        {{@result[i].productHref}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
 </script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="js/moneyctrlList.js"></script>
+<script src="js/baicaijia.js"></script>
 </body>
 </html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+  <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/couponproduct.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="first_header">
+  <span class="iconfont icon-fanhui"></span>
+  <h2>优 惠 券</h2>
+  <a class="download"></a>
+</div>
+<div class="mmb_container">
+  <!--这里是坑-->
+</div>
+<div class="first_root">
+  <div class="first_info">
+    <div class="top_info">
+      <span>登录</span>
+      <span>注册</span>
+      <a href="#" class="iconfont icon-huidingbu">返回顶部</a>
+    </div>
+    <div class="bottom_info">
+      <p>
+        <a class="download" href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+  <a href="#" class="fanhui iconfont icon-huidingbu"></a>
+</div>
+<div id="popover" class="shadow_box mui-popover">
+  <!--第二个坑-->
+</div>
+
+<script type="text/html" id="tpl">
+  <p class="meal_before">
+    --点餐前出示手机中的优惠券,即可享受优惠--
+  </p>
+  {{each result v i}}
+  <div class="coupon_items">
+    <div class="coupon_item clearfix">
+      <div class="left_pic">
+        {{@result[i].couponProductImg}}
+      </div>
+      <div class="right_content">
+        <p class="coupon-title txt-ellipsis-2">{{v.couponProductName}}</p>
+        <span class="coupon_money">{{v.couponProductPrice}}</span>
+        <p class="coupon_time">{{v.couponProductTime}}</p>
+      </div>
+      <div class="item_arrow iconfont icon-jiantou-copy-copy"></div>
+    </div>
+  </div>
+  {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+  {{each result v i}}
+  <div class="shadow_pic {{index==i?'now':''}}">
+    {{@result[i].couponProductImg}}
+    <div class="arrow_left iconfont icon-chevron-copy-copy-copy-copy-copy-copy"></div>
+    <div class="arrow_right iconfont icon-jiantou-copy-copy"></div>
+  </div>
+  {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/couponproduct.js"></script>
+</body>
+</html>

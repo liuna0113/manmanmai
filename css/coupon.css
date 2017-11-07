@@ -1,0 +1,79 @@
+body {
+  background-color: #fff;
+}
+
+.first_header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background: #F4483E;
+}
+
+.first_header span {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.first_header h2 {
+  line-height: 45px;
+}
+
+.mmb_container {
+  margin-top: 50px;
+  margin-bottom: 120px;
+}
+
+.coupon_content {
+  margin-top: 10px;
+}
+
+.coupon_content a {
+  margin: 0 1%;
+  float: left;
+  display: block;
+  width: 31%;
+  height: 100px;
+  border: 1px solid #f1f5f1;
+  padding: 5px 0 10px;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.coupon_content a img {
+  width: 60px;
+  height: 60px;
+}
+
+.coupon_content a p {
+  line-height: 16px;
+  height: 16px;
+}
+
+.product_subnav {
+  line-height: 49px;
+  height: 50px;
+  background: linear-gradient(#fff, #eee);
+  position: relative;
+  padding-left: 15px;
+  border-bottom: 2px solid #dddddd;
+  border-top: 2px solid #dddddd;
+}
+
+/*.first_root .fanhui {*/
+/*display: block;*/
+/*font-size: 30px;*/
+/*background-color: rgba(0, 0, 0, 0.3);*/
+/*border-radius: 50%;*/
+/*position: fixed;*/
+/*bottom: 50px;*/
+/*right: 50px;*/
+/*width: 50px;*/
+/*height: 50px;*/
+/*text-align: center;*/
+/*line-height: 50px;*/
+/*}*/

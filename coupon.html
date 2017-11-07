@@ -8,24 +8,43 @@
   <link rel="stylesheet" href="./lib/font/iconfont.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="css/moneyctrlList.css">
+  <link rel="stylesheet" href="./css/coupon.css">
   <title>Document</title>
 </head>
 <body>
 <div class="first_header">
   <span class="iconfont icon-fanhui"></span>
-  <h2>省 钱 控</h2>
+  <h2>优 惠 券</h2>
   <a class="download"></a>
 </div>
 <div class="mmb_container">
-  <!--坑在这儿-->
+  <div class="coupon_content clearfix">
+    <!--挖个坑-->
+
+  </div>
+  
+  
+  <div class="product_subnav">
+    <div class="product_nav_main">
+      <a href="index.html">首页</a>
+      >
+      <a href="#">优惠券</a>
+      >
+    </div>
+  </div>
+
+
 </div>
 <div class="first_root">
+  <div class="bar">
+    <span class="text">品牌排行</span>
+    <span class="sprite"></span>
+  </div>
   <div class="first_info">
     <div class="top_info">
       <span>登录</span>
       <span>注册</span>
-      <span class="iconfont icon-huidingbu">返回顶部</span>
+      <a href="#" class="iconfont icon-huidingbu">返回顶部</a>
     </div>
     <div class="bottom_info">
       <p>
@@ -38,48 +57,16 @@
   </div>
 </div>
 <script type="text/html" id="tpl">
-
-  <div class="top_content">
-    {{each result v i}}
-    <p>{{v.productName}} <span>{{v.productPinkage}}</span></p>
-    <div class="discount_subtitle">
-      <span>{{v.productFrom}}</span>
-      <span>{{v.productTime}}</span>
-      <span>{{v.productTips}}</span>
-    </div>
-    <div class="content_pic">
-      {{@result[i].productImgSm}}
-      <span class="discount_con">
-       {{v.productInfo2}}
-      </span>
-    </div>
-    <div class="bottom_pic">
-      {{@result[i].productImg2}}
-    </div>
-    <div class="city_list">
-      {{@result[i].productCity}}
-
-    </div>
-    {{/each}}
-
-  </div>
-  <div class="go_buy">
-    <button>前往购买</button>
-  </div>
-  <div class="code">
-    <img src="./images/mmbweixin2.png" alt="">
-  </div>
   {{each result v i}}
-  {{@result[i].productComment}}
+  <a data-couponid="{{v.couponId}}" href="{{v.couponLink}}?couponid={{v.couponId}}">
+    <img src="{{v.couponImg}}" alt="">
+    <p>{{v.couponTitle}}</p>
+  </a>
   {{/each}}
-
-</script>
-<script type="text/html" id="tpl2">
-
 </script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="js/moneyctrlList.js"></script>
+<script src="./js/coupon.js"></script>
 </body>
 </html>

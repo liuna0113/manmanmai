@@ -5,6 +5,7 @@
   background: linear-gradient(#fff, #eee);
   position: relative;
   padding-left: 15px;
+  border-bottom: 2px solid #dddddd;
 }
 
 .product_subnav button {
