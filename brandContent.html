@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/brandContent.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="first_header">
+  <a class="title"></a>
+  <a class="download"></a>
+</div>
+<div class="first_search">
+  <input type="text" placeholder="请输入你想比价的商品">
+  <button>搜索</button>
+</div>
+<div class="mmb_container">
+  <div class="product_subnav">
+    <div class="product_nav_main">
+      <a href="index.html">首页</a>
+      &gt;
+      <a href="brandTitle.html">全部分类</a>
+      &gt;
+    </div>
+  </div>
+  <div class="brand_subnav">
+    <span>平板电视最新评论</span>
+  </div>
+  <div class="product_lists">
+    <!--挖个坑-->
+  </div>
+</div>
+<div class="first_root">
+  <div class="first_info">
+    <div class="top_info">
+      <span>登录</span>
+      <span>注册</span>
+      <a href="#" class="iconfont icon-huidingbu">返回顶部</a>
+    </div>
+    <div class="bottom_info">
+      <p>
+        <a class="download" href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<script type="text/html" id="tpl">
+  <div class="product_list clearfix">
+    <div class="left_pic">
+      <img src="./images/dianshi.jpg" alt="">
+    </div>
+    <div class="right_content">
+      <p class="main_title txt-ellipsis-2">乐视</p>
+    </div>
+  </div>
+  {{each result v i}}
+  <div class="con_area">
+    <div class="triangle"></div>
+    <div class="con_title">
+      <span class="con_time fr">2016/2/18</span>
+      <span>g***n</span>&nbsp;
+      <span class="wujiaoxing">
+      <i class="iconfont icon-wujiaoxing"></i>
+      <i class="iconfont icon-wujiaoxing"></i>
+      <i class="iconfont icon-wujiaoxing"></i>
+      <i class="iconfont icon-wujiaoxing"></i>
+      <i class="iconfont icon-wujiaoxing"></i>
+      </span>
+    </div>
+    <div class="main_con">
+      外观：精工细作，颜值再度提高作为一台55寸的大电视，乐视X55正面看起来非常大气，配合Letv独有的造型独特的云底座，整体视觉观感出色。会发光的Letv标识被放置在了机器的左下角，标识右侧，安排有一个圆形的遥控器信号接收区域。乐视X55的边框处理相当讲究，采用了时下智能手机产品上常见的倒角工艺，配合表面的金属拉丝，展现出产品细节上的用心。同时，乐视X55的正面屏幕边框也非常窄，正面边框与屏幕内部黑边的宽度总和近似等于一部普通智能手机的厚度。在成为会员之前，用户对所有高清视频拥有6分钟的试看时间。应用扩展方面，EUI5延续了超级电视一贯的风格，对于一台安卓系统的设备来说，系统中自带电视管家等应用可以进行内存清理等操作，方便实用。总结：超级电视的完善之作智能电视发展的日渐成熟，让智能电视产品本身越来越难以出现具有突破性的亮点，即使是有了超级之名的乐视TV，在实际的使用上，也并没什么真正让人眼前一亮的功能。此时乐视X55出现的意义，我们觉得是更像是对已经在行业占据领先位置的乐视TV的一次完善，出色的显示效果，更加精致的外观，回归实用的遥控器，配合软件上功能全面的EUI系统，乐视X55称的上市超级电视的完善之作。加油吧，京东
+    </div>
+  
+  
+  </div>
+  {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brandContent.js"></script>
+</body>
+</html>

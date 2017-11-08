@@ -1,0 +1,90 @@
+.mmb_container {
+  margin-top: 100px;
+  margin-bottom: 92px;
+}
+
+.product_subnav {
+  line-height: 29px;
+  height: 30px;
+  background: linear-gradient(#fff, #eee);
+  position: relative;
+  padding-left: 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.brand_subnav {
+  line-height: 29px;
+  height: 30px;
+  background: linear-gradient(#fff, #eee);
+  position: relative;
+  padding-left: 20px;
+  border-bottom: 1px solid #dddddd;
+  color: #B5985C;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product_lists {
+  padding: 10px;
+}
+
+.product_list {
+  display: block;
+  padding: 10px 5px;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+}
+
+.left_pic {
+  float: left;
+}
+
+.left_pic img {
+  width: 80px;
+  height: 80px;
+}
+
+.right_content {
+  overflow: hidden;
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.right_content .main_title {
+  height: 40px;
+  line-height: 20px;
+}
+
+.con_area {
+  padding: 10px;
+  border: 1px solid lightgray;
+  position: relative;
+}
+
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid gray;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  top: -20px;
+  left: 60px;
+}
+
+.con_title {
+  height: 20px;
+  font-size: 16px;
+  color: #cccccc;
+}
+
+.wujiaoxing {
+  color: #ff6c00;
+  font-size: 8px;
+}
+
+.main_con {
+  margin-top: 10px;
+  color: #000;
+}

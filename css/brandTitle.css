@@ -1,0 +1,47 @@
+.mmb_container {
+  margin-top: 100px;
+  margin-bottom: 92px;
+}
+
+.product_subnav {
+  line-height: 29px;
+  height: 30px;
+  background: linear-gradient(#fff, #eee);
+  position: relative;
+  padding-left: 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.brand_subnav {
+  line-height: 29px;
+  height: 30px;
+  background: linear-gradient(#fff, #eee);
+  position: relative;
+  padding-left: 20px;
+  border-bottom: 1px solid #dddddd;
+  color: #B5985C;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product_list {
+  display: block;
+  padding: 5px 5px 0 20px;
+  position: relative;
+  border-bottom: 1px solid #cccccc;
+}
+
+.product_list p {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.product_list i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+

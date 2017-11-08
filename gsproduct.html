@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="./lib/font/iconfont.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/gsproduct.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="first_header">
+  <span class="iconfont icon-fanhui"></span>
+  <h2>凑 单 品</h2>
+  <a class="download"></a>
+</div>
+<div class="mmb_container">
+  <div class="gs_menu fr iconfont icon-sousuo"></div>
+  <div class="gs_nav">
+    <div class="gs_cate clearfix">
+      <div class="gs_brand">京东</div>
+      <div class="gs_area">华南</div>
+      <div class="gs_total">全部价格</div>
+    </div>
+  
+  </div>
+  <div class="gs_product">
+    <!--挖个a链接的坑-->
+  </div>
+  <!--<div class="gs_product1">-->
+  <!--&lt;!&ndash;挖个a链接的坑&ndash;&gt;-->
+  <!--</div>-->
+  <div class="item_box clearfix">
+    <!--挖个图文坑-->
+  </div>
+</div>
+<div class="first_root">
+  <div class="first_info">
+    <div class="top_info">
+      <span>登录</span>
+      <span>注册</span>
+      <span class="iconfont icon-huidingbu">返回顶部</span>
+    </div>
+    <div class="bottom_info">
+      <p>
+        <a class="download" href="javascript:;">手机APP下载</a>
+        <a href="javascript:;">慢慢买手机版</a>
+        -掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+<script type="text/html" id="tpl">
+  {{each result v i}}
+  <a href="getdiscountproduct.html?productid={{v.productId}}" class="mmb_item">
+    <div class="item_top_pic">
+      <img src="{{v.productImg}}" alt="">
+    </div>
+    <div class="item_bottom_con">
+      <p class="item_title txt-ellipsis-2">{{v.productName}}</p>
+      <div class="bottom_con clearfix">
+        <p class="item_money">{{v.productPrice}}</p>
+        <div class="go_add">
+          <button>去凑单</button>
+        </div>
+      </div>
+    </div>
+  </a>
+  {{/each}}
+</script>
+<script type="text/html" id="tpl2">
+  {{each result v i}}
+  <a href="gsproduct.html?shopId={{v.shopId}}&areaId={{v.areaId}}&shopid={{result[0].shopid}}&areaid={{result[0].areaid}}">{{v.shopName}}{{v.areaName}} <span
+      class="iconfont icon-duihao now"></span></a>
+  {{/each}}
+</script>
+<!--gsproduct.html?shopId={{v.shopId}}&areaId={{v.areaId}}&shopid={{result}}&areaid={{result[0].areaid}}-->
+<!--<script type="text/html" id="tpl3">-->
+<!--{{each result v i}}-->
+<!--<a href="gsproduct.html?shopid={{v.shopId}}&areaid={{v.areaId}}">{{v.areaName}}<span-->
+<!--class="iconfont icon-duihao now"></span></a>-->
+<!--{{/each}}-->
+<!--</script>-->
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/gsproduct.js"></script>
+</body>
+</html>

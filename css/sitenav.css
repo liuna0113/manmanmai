@@ -1,0 +1,47 @@
+.first_header {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+.first_header span {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.mmb_container {
+  margin-top: 50px;
+  margin-bottom: 92px;
+  padding: 10px 100px;
+}
+
+.item_box {
+  /*padding: 10px;*/
+}
+
+.item_box a {
+  display: block;
+  float: left;
+  padding: 10px 5px;
+  text-align: center;
+  height: 40px;
+  border: 1px solid #cccccc;
+  background-color: #eee;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.item_box a img {
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+
+.item_box a span {
+  margin-left: 5px;
+  line-height: 20px;
+}
