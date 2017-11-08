@@ -1,37 +1,13 @@
 $(function () {
-  var tools = {
-    getObj: function () {
-      var str = location.search;
-      str = str.substring(1);
-      var arr = [];
-      var obj = {};
-      arr = str.split('&');
-      arr.forEach(function (v, i) {
-        obj[v.split('=')[0]] = decodeURI(v.split('=')[1]);
-      });
-      return obj;
-    },
-    getObjContent: function (key) {
-      return this.getObj()[key];
-    }
-  };
   var categoryid = tools.getObjContent("categoryid");
   var titleid = tools.getObjContent("titleid");
   var pageid = tools.getObjContent("pageid") || 1;
   var total = 0;
   var pagesize = 0;
-  var str = "<option>请选择</option>";
-  $.ajax({
-    type: "get",
-    url: "http://www.mmb.com:9090/api/getcategorybyid",
-    data: {
-      categoryid: categoryid
-    },
-    success: function (data) {
-      console.log(data);
-      $('.product_nav_main').html(template('tpl', data))
-    }
-  });
+  var str1 = "<option>请选择</option>";
+  var retUrl = str + url.getcategorybyid;
+  var data = {categoryid: categoryid};
+  tools.render(retUrl, data, $('.product_nav_main'), 'tpl');
   function pagerender(categoryid, titleid, pageid) {
     $.ajax({
       type: "get",
@@ -47,7 +23,7 @@ $(function () {
         pagesize = data.pagesize;
         pageNum = Math.ceil(total / pagesize);
         getStr(pageNum);
-        $('.middle_btn select').html(str);
+        $('.middle_btn select').html(str1);
         $('.good_lists').html(template('tpl2', data))
       }
     });
@@ -90,16 +66,18 @@ $(function () {
     // console.log(category);
     var categoryid = $(this).data("categoryid");
     var productid = $(this).data("productid");
-    location.href = "http://www.mmb.com/productInfo.html?categoryid=" + categoryid + "&productid=" + productid;
+    var categoryName = $('.category_name').html();
+    console.log(categoryName);
+    location.href = "http://www.mmb.com/productInfo.html?categoryid=" + categoryid + "&productid=" + productid + "&categoryname=" + categoryName;
   })
   
   function getStr(pageNum) {
     console.log(pageid);
     for (var i = 1; i <= pageNum; i++) {
       if (i == pageid) {
-        str += "<option selected>" + i + "</option>"
+        str1 += "<option selected>" + i + "</option>"
       } else {
-        str += "<option>" + i + "</option>"
+        str1 += "<option>" + i + "</option>"
       }
     }
   };

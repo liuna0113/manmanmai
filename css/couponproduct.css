@@ -10,7 +10,8 @@ body {
   background: #F4483E;
 }
 
-.first_header span {
+.first_header .icon-fanhui {
+  color: #fff;
   position: absolute;
   top: 0;
   left: 20px;
@@ -104,30 +105,52 @@ body {
 .shadow_box {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
-.shadow_pic {
+/*.mui-slider-item {*/
+/*!*display: none;*!*/
+/*position: fixed;*/
+/*background-color: rgba(0, 0, 0, 0.6);*/
+/*z-index: 999;*/
+/*width: 100%;*/
+/*height: 100%;*/
+/*text-align: center;*/
+/*vertical-align: middle;*/
+/*}*/
+
+/*.shadow_pic.now {*/
+/*!*display: block;*!*/
+/*}*/
+
+/*.mui-slider-item img {*/
+/*position: absolute;*/
+/*left: 50%;*/
+/*top: 50%;*/
+/*transform: translateX(-50%) translateY(-50%);*/
+/*width: 200px;*/
+/*height: 160px;*/
+/*}*/
+.shadow {
   display: none;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 999;
   width: 100%;
   height: 100%;
-  text-align: center;
-  vertical-align: middle;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 33;
 }
 
-.shadow_pic.now {
-  display: block;
-}
-
-.shadow_pic img {
+.box {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  width: 200px;
-  height: 160px;
+  width: 300px;
+  height: 240px;
 }
 
 .arrow_left,
@@ -142,9 +165,9 @@ body {
 }
 
 .arrow_left {
-  left: 10px;
+  left: -50%;
 }
 
 .arrow_right {
-  right: 10px;
+  right: -50%;
 }

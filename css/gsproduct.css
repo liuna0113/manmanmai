@@ -5,7 +5,8 @@
   color: #fff;
 }
 
-.first_header span {
+.first_header .icon-fanhui {
+  color: #fff;
   position: absolute;
   top: 0;
   left: 20px;
@@ -63,7 +64,7 @@
 }
 
 .gs_product,
-.gs_product1 {
+.gs_Doubleproduct {
   display: none;
   width: 100%;
   height: 30px;
@@ -74,7 +75,7 @@
   z-index: 999;
 }
 
-.gs_product > a, .gs_product1 > a {
+.gs_product > a, .gs_Doubleproduct > a {
   position: relative;
   display: block;
   background-color: #fff;
@@ -82,13 +83,13 @@
   border-bottom: 1px solid gray;
 }
 
-.gs_product > a span, .gs_product1 > a span {
+.gs_product > a span, .gs_Doubleproduct > a span {
   position: absolute;
   right: 20px;
   color: #ff6c00;
 }
 
-.gs_product > a span.now, .gs_product1 > a span.now {
+.gs_product > a span.now, .gs_Doubleproduct > a span.now {
   display: none;
 }
 
@@ -117,7 +118,8 @@
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 38px;
+  left: 80%;
+
 }
 
 .gs_total:after {

@@ -5,7 +5,8 @@
   color: #fff;
 }
 
-.first_header span {
+.first_header a {
+  color: #fff;
   position: absolute;
   top: 0;
   left: 20px;

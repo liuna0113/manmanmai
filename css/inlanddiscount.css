@@ -5,12 +5,13 @@
   color: #fff;
 }
 
-.first_header span {
+.first_header .icon-fanhui {
   position: absolute;
   top: 0;
   left: 20px;
   width: 20px;
   height: 20px;
+  color: #fff;
 }
 
 .mmb_container {

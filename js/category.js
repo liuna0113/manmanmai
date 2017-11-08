@@ -1,26 +1,13 @@
 $(function () {
-  $.ajax({
-    type: 'get',
-    url: "http://www.mmb.com:9090/api/getcategorytitle",
-    success: function (data) {
-      // console.log(data);
-      $('.mmb_container').html(template('tpl', data));
-    }
-
-  });
+  var retUrl = str + url.getcategorytitle;
+  var retUrl2 = str + url.getcategory;
+  var data = "";
+  tools.render(retUrl, data, $('.mmb_container'), 'tpl');
   $('.mmb_container').on('click', '.box_title', function () {
     // console.log("出来了");
-    $(this).siblings().toggle();
+    $(this).siblings().toggle().parent().siblings().children('.pro_list').hide();
     var titleId = $(this).data("id");
-    // console.log(titleId);
-    $.ajax({
-      type: "get",
-      url: "http://www.mmb.com:9090/api/getcategory",
-      data: {'titleid': titleId},
-      success: function (data) {
-        console.log(data);
-        $('.pro_list').html(template('tpl2', data));
-      }
-    })
+    var data = {'titleid': titleId};
+    tools.render(retUrl2, data, $('.pro_list'), 'tpl2');
   })
 })

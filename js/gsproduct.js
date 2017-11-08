@@ -1,90 +1,71 @@
 $(function () {
-  var tools = {
-    getObj: function () {
-      var str = location.search;
-      str = str.substring(1);
-      var arr = [];
-      var obj = {};
-      arr = str.split('&');
-      arr.forEach(function (v, i) {
-        obj[v.split('=')[0]] = decodeURI(v.split('=')[1]);
-      });
-      return obj;
-    },
-    getObjContent: function (key) {
-      return this.getObj()[key];
-    }
+  var shopid = tools.getObjContent("shopId") || 0;
+  var areaid = tools.getObjContent("areaId") || 0;
+  var retUrl = str + url.getgsproduct;
+  var data = {
+    "shopid": shopid,
+    "areaid": areaid
   };
-  var shopid = tools.getObjContent("shopId") || tools.getObjContent("shopid") || 1;
-  var areaid = tools.getObjContent("areaId") || tools.getObjContent("areaid") || 1;
-  
-  function render(shopid, areaid) {
-    $.ajax({
-      url: "http://www.mmb.com:9090/api/getgsproduct",
-      type: "get",
-      data: {
-        shopid: shopid,
-        areaid: areaid
-      },
-      success: function (data) {
-        console.log(data);
+  tools.render(retUrl, data, $('.item_box'), 'tpl');
 
-        $('.item_box').html(template('tpl', data));
-        
-      }
-    });
-  }
-  
-  function renderShop() {
+  function renderShop(idStr) {
     $.ajax({
       url: "http://www.mmb.com:9090/api/getgsshop",
       type: "get",
       success: function (data) {
         console.log(data);
-        data.result[0].shopid = data.result[0].shopId;
-        data.result[0].areaid = data.result[0].areaId;
-        console.log(shopid);
-        console.log(areaid);
-        $('.gs_product').html(template('tpl2', data));
+        $('.gs_product').html(template(idStr, data));
       }
     });
   }
   
-  function renderArea() {
+  function renderArea(idStr) {
     $.ajax({
       url: "http://www.mmb.com:9090/api/getgsshoparea",
       type: "get",
       success: function (data) {
         console.log(data);
-        data.result[0].shopid = data.result[0].shopId;
-        data.result[0].areaid = data.result[0].areaId;
-        console.log(shopid);
-        console.log(areaid);
-        $('.gs_product').html(template('tpl2', data));
+        $('.gs_Doubleproduct').html(template(idStr, data));
       }
     });
   }
-  
-  render(shopid, areaid);
-  
+
   $('.gs_brand').on('click', function () {
-    renderShop();
+    renderShop('tpl2');
     myClick();
   });
   
   $('.gs_area').on('click', function () {
-    renderArea();
-    myClick();
+    // var $that = $(this);
+    renderArea('tpl3');
+    myDoubleClick();
   });
-  
-  $('.icon-fanhui').on('click', function () {
-    history.go(-1);
-  })
+
   function myClick() {
+    $('.gs_Doubleproduct').hide();
     $('.gs_product').toggle().on('click', 'a', function () {
-      console.log(2);
-      $(this).children().toggleClass("now").parent().siblings().children().addClass("now");
-    })
+      $(this).children().removeClass("now").parent().siblings().children().addClass("now").parent().parent().hide();
+      $that = $(this).find('i').html();
+      $('.gs_brand').html($that);
+      data.shopid = $(this).data("shopid");
+      console.log(data);
+      tools.render(retUrl, data, $('.item_box'), 'tpl');
+    });
   }
-  
+
+  function myDoubleClick() {
+    var $that = null;
+    $('.gs_product').hide();
+    $('.gs_Doubleproduct').toggle().on('click', 'a', function () {
+      $(this).children().removeClass("now").parent().siblings().children().addClass("now").parent().parent().hide();
+      $that = $(this).find('i').html().substr(0, 2);
+      $('.gs_area').html($that);
+      data.areaid = $(this).data("areaid");
+      console.log(data);
+      tools.render(retUrl, data, $('.item_box'), 'tpl');
+    });
+
+  }
+
+
 })

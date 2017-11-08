@@ -68,12 +68,12 @@
 <script type="text/html" id="tpl">
   <a href="index.html">首页</a>
   &gt;
-  <a href="category.html">全部分类</a>
+  <a href="category.html?categoryName={{}}">全部分类</a>
   &gt;
   {{each result v i}}
-  <a href="#">{{v.category}}</a>
-  &gt;
+  <a class="category_name" href="#">{{v.category}}</a>
   {{/each}}
+  &gt;
 </script>
 <script type="text/html" id="tpl2">
   {{each result v i}}
@@ -101,26 +101,3 @@
 <script src="./js/productList.js"></script>
 </body>
 </html>
-
-<!--"-->
-<!--<table width="100%">-->
-<!--<tbody>-->
-<!--<tr>-->
-<!--<td rowspan="2" class="p_pic" valign="top"><a-->
-<!--href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia"-->
-<!--target="_blank" onclick="trackLog('商品购买','比价页面');"> <img-->
-<!--src="http://sf.manmanbuy.com/images/sitelogo/1.png"></a></td>-->
-<!--<td><a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia"-->
-<!--target="_blank" onclick="trackLog('商品购买','比价页面');">京东商城</a></td>-->
-<!--<td class="red"> ￥1999.00</td>-->
-<!--<td align="center" width="60"><span-->
-<!--style="display: inline-block;width: 56px;height: 24px;border-radius: 6px;text-align: center;line-height: 24px;background-color: #ff5500;color: #fff;font-size: 14px;">去购买</span>-->
-<!--</td>-->
-<!--</tr>-->
-<!--<tr class="tab2">-->
-<!--<td></td>-->
-<!--<td class="r"></td>-->
-<!--<td></td>-->
-<!--</tr>-->
-<!--</tbody>-->
-<!--</table>"-->

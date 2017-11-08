@@ -1,27 +1,10 @@
 $(function () {
-  
-  // console.log(obj.retUrl + '===');
-  $.ajax({
-    url: "http://www.mmb.com:9090/api/getindexmenu",
-    type: "get",
-    success: function (data) {
-      console.log(data);
-      $('.one_nav').html(template('tpl', data));
-    }
-  });
-  $.ajax({
-    url: "http://www.mmb.com:9090/api/getmoneyctrl",
-    type: "get",
-    success: function (data) {
-      console.log(data);
-      $('.good_box').html(template('tpl2', data));
-    }
-  });
+  var retUrl = str + url.getindexmenu;
+  var retUrl2 = str + url.getmoneyctrl;
+  var data = "";
+  tools.render(retUrl, data, $('.one_nav'), 'tpl');
+  tools.render(retUrl2, data, $('.good_box'), 'tpl2');
   $('.one_nav').on('click', '.nav_now', function () {
     $('.two_nav').toggle();
-  })
-  $('.icon-huidingbu').on('click', function () {
-    console.log(1);
-    // top = 0;
   })
 })

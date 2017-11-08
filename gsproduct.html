@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="first_header">
-  <span class="iconfont icon-fanhui"></span>
+  <a href="javascript:history.go(-1);" class="iconfont icon-fanhui"></a>
   <h2>凑 单 品</h2>
   <a class="download"></a>
 </div>
@@ -21,8 +21,8 @@
   <div class="gs_menu fr iconfont icon-sousuo"></div>
   <div class="gs_nav">
     <div class="gs_cate clearfix">
-      <div class="gs_brand">京东</div>
-      <div class="gs_area">华南</div>
+      <div class="gs_brand">品牌</div>
+      <div class="gs_area">地区</div>
       <div class="gs_total">全部价格</div>
     </div>
   
@@ -30,9 +30,9 @@
   <div class="gs_product">
     <!--挖个a链接的坑-->
   </div>
-  <!--<div class="gs_product1">-->
-  <!--&lt;!&ndash;挖个a链接的坑&ndash;&gt;-->
-  <!--</div>-->
+  <div class="gs_Doubleproduct">
+    <!--挖个a链接的坑-->
+  </div>
   <div class="item_box clearfix">
     <!--挖个图文坑-->
   </div>
@@ -74,17 +74,18 @@
 </script>
 <script type="text/html" id="tpl2">
   {{each result v i}}
-  <a href="gsproduct.html?shopId={{v.shopId}}&areaId={{v.areaId}}&shopid={{result[0].shopid}}&areaid={{result[0].areaid}}">{{v.shopName}}{{v.areaName}} <span
+  <a class="item_con"
+     href="javascript:;" data-shopid="{{v.shopId}}"> <i>{{v.shopName}}</i><span
       class="iconfont icon-duihao now"></span></a>
   {{/each}}
 </script>
-<!--gsproduct.html?shopId={{v.shopId}}&areaId={{v.areaId}}&shopid={{result}}&areaid={{result[0].areaid}}-->
-<!--<script type="text/html" id="tpl3">-->
-<!--{{each result v i}}-->
-<!--<a href="gsproduct.html?shopid={{v.shopId}}&areaid={{v.areaId}}">{{v.areaName}}<span-->
-<!--class="iconfont icon-duihao now"></span></a>-->
-<!--{{/each}}-->
-<!--</script>-->
+<script type="text/html" id="tpl3">
+  {{each result v i}}
+  <a class="item_con"
+     href="javascript:;" data-areaid="{{v.areaId}}"> <i>{{v.areaName}} </i> <span
+      class="iconfont icon-duihao now"></span></a>
+  {{/each}}
+</script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>

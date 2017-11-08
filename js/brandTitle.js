@@ -1,16 +1,5 @@
 $(function () {
-  function render() {
-    $.ajax({
-      type: 'get',
-      url: "http://www.mmb.com:9090/api/getbrandtitle",
-      success: function (data) {
-        console.log(data);
-        $('.product_lists').html(template('tpl', data));
-      }
-    });
-  }
-  
-  render();
-  
-  
+  var retUrl = str + url.getbrandtitle;
+  var data = "";
+  tools.render(retUrl, data, $('.product_lists'), 'tpl');
 })

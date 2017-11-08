@@ -1,21 +1,4 @@
 $(function () {
-  // console.log(obj.retUrl + '===');
-  var tools = {
-    getObj: function () {
-      var str = location.search;
-      str = str.substring(1);
-      var arr = [];
-      var obj = {};
-      arr = str.split('&');
-      arr.forEach(function (v, i) {
-        obj[v.split('=')[0]] = decodeURI(v.split('=')[1]);
-      });
-      return obj;
-    },
-    getObjContent: function (key) {
-      return this.getObj()[key];
-    }
-  };
   var pageid = tools.getObjContent("pageid") || 1;
   var pageNum = 0;
   
@@ -71,9 +54,6 @@ $(function () {
     location.href = "moneyctrl.html?pageid=" + pageid;
   });
   
-  $('.icon-fanhui').on('click', function () {
-    history.go(-1);
-  });
   $('.good_box').on('click', '.good_list', function () {
     console.log(1);
     var productid = $(this).data("productid");

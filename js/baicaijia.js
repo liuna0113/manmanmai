@@ -1,23 +1,8 @@
 $(function () {
-
-  var tools = {
-    getObj: function () {
-      var str = location.search;
-      str = str.substring(1);
-      var arr = [];
-      var obj = {};
-      arr = str.split('&');
-      arr.forEach(function (v, i) {
-        obj[v.split('=')[0]] = decodeURI(v.split('=')[1]);
-      });
-      return obj;
-    },
-    getObjContent: function (key) {
-      return this.getObj()[key];
-    }
-  };
   var titleid = tools.getObjContent("titleid") || 0;
   var num = 0;
+  var retUrl = str + url.getbaicaijiaproduct;
+  var data = {"titleid": titleid};
   
   function render() {
     $.ajax({
@@ -41,33 +26,11 @@ $(function () {
     scrollY: false, //是否竖向滚动
     scrollX: true //是否横向滚动
   });
-  pageRender(titleid);
-  function pageRender(titleid) {
-    titleid = titleid || 0;
-    $.ajax({
-      url: "http://www.mmb.com:9090/api/getbaicaijiaproduct",
-      type: "get",
-      data: {
-        titleid: titleid
-      },
-      success: function (data) {
-        console.log(data);
-        $('.baicai_item_box').html(template('tpl2', data));
-      }
-    });
-  }
-
-  // console.log($('.baicai_nav ul li'));
-
+  tools.render(retUrl, data, $('.baicai_item_box'), 'tpl2');
+  
   $('.baicai_nav ul').on('click', 'li a', function () {
     $(this).toggleClass("now").parent().siblings().find("a").removeClass("now");
     var titleid = $(this).data("titleid");
-    pageRender(titleid);
+    tools.render(retUrl, data, $('.baicai_item_box'), 'tpl2');
   });
-
-  $('.icon-fanhui').on('click', function () {
-    history.go(-1);
-  })
-  
-  
 })
